@@ -1,4 +1,4 @@
-# LATAM Airlines ML Challenge - Documentation
+# ML Challenge - Documentation
 
 ## Model Selection
 
