@@ -13,7 +13,7 @@ class DelayModel:
     ):
         self._model = None # Model should be saved in this attribute.
 
-        model_path = "data/trained_model.pkl"
+        model_path = "model/trained_model.pkl"
         if os.path.exists(model_path):
             with open(model_path, "rb") as f:
                 self._model = pickle.load(f)
