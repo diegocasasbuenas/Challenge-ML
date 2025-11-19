@@ -48,5 +48,4 @@ reports/
 *.log
 
 # Model artifacts
-*.pkl
 *.joblib
