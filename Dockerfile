@@ -8,7 +8,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY challenge/ ./challenge/
-COPY data/trained_model.pkl ./data/trained_model.pkl
+COPY model/trained_model.pkl ./model/trained_model.pkl
 
 EXPOSE 8000
 
