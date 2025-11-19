@@ -22,7 +22,7 @@ jobs:
       uses: google-github-actions/setup-gcloud@v1
 
     - name: Configure Docker for Artifact Registry
-      run: gcloud auth configure-docker us-central1-docker.pkg.dev --project=${{secrets.GCP_SA_KEY}}
+      run: gcloud auth configure-docker us-central1-docker.pkg.dev --project=${{ secrets.GCP_PROJECT_ID }}
 
     - name: Build Docker image
       run: docker build -t us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/latam-repo/challenge-api:${{ github.sha }} .
