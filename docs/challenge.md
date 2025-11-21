@@ -49,3 +49,42 @@ The CD pipeline (cd.yml) triggers on pushes to main. It authenticates to Google 
 - Avg response: 184ms
 
 **It could variates at every test**
+
+## API Usage
+
+### POST /predict
+
+Make a prediction request:
+
+```bash
+curl -X POST "https://challenge-api-595836143326.us-central1.run.app/predict" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "flights": [
+      {
+        "OPERA": "Aerolineas Argentinas",
+        "TIPOVUELO": "N",
+        "MES": 3
+      }
+    ]
+  }'
+```
+
+**Response:**
+```json
+{
+  "predict": [0]
+}
+```
+
+**Multiple flights:**
+```bash
+curl -X POST "https://challenge-api-595836143326.us-central1.run.app/predict" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "flights": [
+      {"OPERA": "Grupo LATAM", "TIPOVUELO": "I", "MES": 12},
+      {"OPERA": "Sky Airline", "TIPOVUELO": "N", "MES": 7}
+    ]
+  }'
+```
